@@ -1,0 +1,21 @@
+<Picture>
+  <TitleEng>X-10</TitleEng>
+  <TitleEsp>X-10 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1020x1600</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp> “Diario de la Marina”. Serie “Niño vendiendo periódicos”</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082"> “Diario de la Marina”. Serie “Niño vendiendo periódicos”</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">Estudio RPH No. 3489/9</Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">
+    </Property>
+  </Properties>
+</Picture>

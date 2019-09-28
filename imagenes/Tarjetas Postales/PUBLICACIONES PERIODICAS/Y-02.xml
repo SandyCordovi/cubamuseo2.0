@@ -1,0 +1,21 @@
+<Picture>
+  <TitleEng>Y-02</TitleEng>
+  <TitleEsp>Y-02 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1020x1602</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp>“Diario de la Marina”. Serie “Joven vendiendo periódicos”</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082">“Diario de la Marina”. Serie “Joven vendiendo periódicos”</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">Estudio Roto </Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">
+    </Property>
+  </Properties>
+</Picture>

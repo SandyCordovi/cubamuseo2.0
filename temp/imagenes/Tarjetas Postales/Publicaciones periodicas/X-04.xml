@@ -1,0 +1,20 @@
+<Picture>
+  <TitleEng>X-04</TitleEng>
+  <TitleEsp>X-04 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1026x1605</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp> “La Opinión”. Serie “Niño vendiendo periódicos”</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082"> “La Opinión”. Serie “Niño vendiendo periódicos”</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">Estudio RPH No. 3489/4</Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">El diario “La Opinión” fue fundado en la ciudad de la Habana, en el año 1906, por Enrique Collazo Tejada. A la larga se convirtió en un órgano defensor de los intereses del presidente Alfredo Zayas.</Property>
+  </Properties>
+</Picture>

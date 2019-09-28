@@ -1,0 +1,20 @@
+<Picture>
+  <TitleEng>L-02</TitleEng>
+  <TitleEsp>L-02 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1051x1636</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp>The Havana Post. Tercera serie, formato vertical. Motivo: Hotel Miramar</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082">The Havana Post. Tercera serie, formato vertical. Motivo: Hotel Miramar</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">¨Osnabrucker Papierwaren Fabrik¨ (O P F)</Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">El Hotel Miramar, proveniente de la etapa colonial, existió hasta la década del treinta. Estaba situado en un punto clave de la ciudad, frente al Malecón, al final del Paseo del Prado, por donde pasaban casi todos los transeúntes de la época e incluso los desfiles de carnaval.</Property>
+  </Properties>
+</Picture>

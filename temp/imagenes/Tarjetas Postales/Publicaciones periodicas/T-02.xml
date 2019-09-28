@@ -1,0 +1,20 @@
+<Picture>
+  <TitleEng>T-02</TitleEng>
+  <TitleEsp>T-02 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1054x1635</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp>El Mundo Ilustrado. Tercera serie, formato vertical. Motivo:  Interior de la Catedral</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082">El Mundo Ilustrado. Tercera serie, formato vertical. Motivo:  Interior de la Catedral</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">¨Osnabrucker Papierwaren Fabrik¨ (O P F)</Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">Exhibe este motivo el interior de la sala central de la Catedral de la Habana, con el altar mayor y la bella ornamentación realizada en el siglo XVIII por el obispo Juan José Díaz de Espada y Landa. </Property>
+  </Properties>
+</Picture>

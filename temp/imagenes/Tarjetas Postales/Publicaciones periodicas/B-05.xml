@@ -1,0 +1,20 @@
+<Picture>
+  <TitleEng>B-05</TitleEng>
+  <TitleEsp>B-05 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1642x1052</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp>Diario de la Marina. Segunda serie, formato horizontal. Motivo: Foso de los Laureles</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082">Diario de la Marina. Segunda serie, formato horizontal. Motivo: Foso de los Laureles</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">¨Osnabrucker Papierwaren Fabrik¨ (O P F)</Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">De nuevo se usa aquí el escudo español. En la vista adjunta aparece del Foso de los Laureles, tristemente famoso por las ejecuciones efectuadas en él durante la dominación española. </Property>
+  </Properties>
+</Picture>

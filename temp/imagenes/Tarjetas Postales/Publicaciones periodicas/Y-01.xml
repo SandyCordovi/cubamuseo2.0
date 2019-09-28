@@ -1,0 +1,20 @@
+<Picture>
+  <TitleEng>Y-01</TitleEng>
+  <TitleEsp>Y-01 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1006x1610</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp> “El Mundo”. Serie “Joven vendiendo periódicos”</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082"> “El Mundo”. Serie “Joven vendiendo periódicos”</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">Estudio Roto </Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">En esta serie, del mismo tipo que la anterior, lo único que cambia es la figura del vendedor que ahora es algo mayor y se encuentra en otro sitio. En realidad esta idea de los jóvenes vendedores exhibiendo diferentes publicaciones fue bastante usada en Europa, donde aparecieron grandes emisiones con la misma tónica. </Property>
+  </Properties>
+</Picture>

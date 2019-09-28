@@ -1,0 +1,20 @@
+<Picture>
+  <TitleEng>X-12</TitleEng>
+  <TitleEsp>X-12 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1018x1600</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp> “La Prensa”. Serie “Niño vendiendo periódicos”</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082"> “La Prensa”. Serie “Niño vendiendo periódicos”</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">Estudio RPH No. 3489/11</Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">“La Prensa”, diario independiente de información, surgió en la Habana en 1914, fundado y dirigido por Carlos Garrido. En su primera época fue famosa su sección “Arreglando el Mundo” de Félix Callejas. Ya por los años treinta se convirtió en órgano del Partido Acción Republicana.</Property>
+  </Properties>
+</Picture>

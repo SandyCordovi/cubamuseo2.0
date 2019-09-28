@@ -1,0 +1,455 @@
+/* 
+    Document   : cui_style
+    Created on : Dec 11, 2015, 10:53:58 AM
+    Author     : Cuinfinity
+    Description: Estilos a gregados al la administracion.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+body, html
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #efefef; 
+}
+
+.banda-menu
+{
+    background-color: #252525; padding-top: 30px;
+    width:260px;
+    float:left;
+}
+.banda-contenido
+{
+    overflow: hidden; padding: 30px 30px 10px 30px;
+    margin-left:260px;
+}
+.menu-admin
+{
+    list-style: outside none none;
+}
+
+.menu-admin li
+{
+    list-style: outside none none; color: #fff; overflow: hidden; padding: 0 10px 0 10px;
+}
+
+.menu-admin li.oculto
+{
+    display: none; visibility: collapse;
+}
+
+.menu-admin li h1
+{
+    font-family: "Open Sans Light"; color: #a0a0a0; font-size: 30px; padding: 0 10px 0 10px;
+}
+.menu-admin li .name
+{
+    color: #909090; font-size: 15px; padding: 0 10px 0 10px;
+}
+.menu-admin li .separador
+{
+    padding-top: 20px;
+}
+
+.menu-admin .link
+{
+    font-size: 18px; padding: 5px 20px;
+}
+
+.menu-admin .link:hover
+{
+    background-color: #107C10;
+}
+
+.menu-admin .caption
+{
+    font-size: 17px; padding: 10px; background-color: #151515;
+}
+.menu-admin .caption p
+{
+    padding: 0; 
+}
+
+.menu-admin .linkactivo
+{
+    background-color: #107C10;
+}
+
+.menu-admin .li a
+{
+    width: 100%; font-family: "Open Sans Light";
+}
+
+.admin-contenedor
+{
+    float: left; width: 100%; height: 100%; overflow: auto;
+}
+
+.admin-titulo
+{
+    font-family: "Open Sans Light"; font-size: 30px; color: #252525;
+}
+
+.btn_admin
+{
+    float: left; overflow: hidden; padding: 10px 10px; background-color: #107C10; color: #fff; margin-right: 10px; cursor: pointer;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+
+}
+.btn_admin:hover
+{
+ background-color: #073807;
+}
+
+.btn_admin_del
+{
+    float: left; overflow: hidden; padding: 10px 10px; background-color: #7c1010; color: #fff; margin-right: 10px; cursor: pointer;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+
+}
+.btn_admin_del:hover
+{
+ background-color: #380707;
+}
+
+.admin_close
+{
+    cursor: pointer;
+}
+
+.admin_search_box{
+    float: right; padding: 5px; width: 400px; border: 1px solid #107C10; background-color: #dcdcdc;
+}
+
+.admin_search_box input{
+    float: left; width: 320px; border: none; background-color: transparent; height: 32px;
+}
+.admin_search_box input[type=submit]{
+    float: right; width: 45px; border: none; background-color: transparent; height: 32px; cursor: pointer;
+    background-image: url('../../images/lupan.png'); background-repeat: no-repeat; background-position: center center;
+}
+
+
+
+
+
+
+
+
+
+
+table.grid {
+	background: #f5f5f5;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 30px auto;
+	text-align: left;
+	width: 100%;
+}
+
+table.grid th {
+	background: #107C10;
+	border-left: 1px solid #555;
+	border-right: 1px solid #777;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 1px 0 #999;
+	color: #fff;
+        font-weight: bold;
+	padding: 5px 10px;
+	position: relative;
+	text-shadow: 0 1px 0 #000;
+}
+
+table.grid th:after {
+/*	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));*/
+	content: '';
+	display: block;
+	height: 25%;
+	left: 0;
+	margin: 1px 0 0 0;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+}
+
+table.grid th:first-child {
+	border-left: 1px solid #777;
+	box-shadow: inset 1px 1px 0 #999;
+}
+
+table.grid th:last-child {
+	box-shadow: inset -1px 1px 0 #999;
+}
+
+table.grid td{
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 5px 10px;
+	position: relative;
+	transition: all 300ms;
+        color: #555;        
+        font-size: 12px;
+}
+
+table.grid td strong {
+    font-size: 12px;
+}
+
+table.grid td:first-child {
+	box-shadow: inset 1px 0 0 #fff;
+}
+
+table.grid td:last-child {
+	border-right: 1px solid #e8e8e8;
+	box-shadow: inset -1px 0 0 #fff;
+}
+
+table.grid tr {
+	
+}
+
+table.grid tr:nth-child(odd) td {
+	background: #f1f1f1;
+}
+
+table.grid tr:last-of-type td {
+	box-shadow: inset 0 -1px 0 #fff;
+}
+
+table.grid tr:last-of-type td:first-child {
+	box-shadow: inset 1px -1px 0 #fff;
+}
+
+table.grid tr:last-of-type td:last-child {
+	box-shadow: inset -1px -1px 0 #fff;
+}
+
+table.grid tbody:hover td {
+    
+}
+
+table.grid tbody:hover tr:hover td {
+	background-color: #dcdcdc;       
+}
+
+
+.gal_element
+{
+    width: 19%; float: left;
+    margin-right: 10px; height: 210px; margin-top: 10px; overflow: hidden; padding: 5px;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+.gal_element:hover
+{
+    background-color: #ccc;
+}
+.gal_element_activo
+{
+    background-color: #999;
+}
+.gal_element input
+{
+    margin-bottom: 10px; float: right;
+}
+.gal_element div
+{
+     background-position: center center; background-size: cover; background-repeat: no-repeat; height: 150px;
+}
+.gal_element p
+{
+    line-height: 35px; color: #252525;
+}
+
+
+
+
+
+
+
+
+
+/* prograss bar */
+.progressbox {
+	border: 1px solid #107c10;
+	padding: 1px;
+	position:relative;
+	width:180px;
+	border-radius: 3px;
+        margin: 90px 10px;
+	display:block;
+	text-align:center;
+}
+.progressbar {
+	height:20px;
+	border-radius: 3px;
+	background-color: #107c10;
+	width:1%;
+}
+.statustxt {
+	top:1px;
+        width: 180px;
+        left: 0;
+	position:absolute;
+	display:inline-block;
+	color: #FFFFFF;
+        text-align:center;
+}
+
+.cajon_casa
+{
+    margin-right: 20px; margin-top: 20px; height: 200px; padding: 3px;
+}
+
+.cajon_casa:hover
+{
+    background-color: #adadad;
+}
+
+.cajon_casa_activo
+{
+    background-color: #adadad;
+}
+
+.cajon_casa_block
+{
+    background-color: #0076CC;
+}
+
+.cajon_casa input
+{
+    float: right;
+}
+.cajon_casa div
+{
+    float: left;
+    width: 100%;
+    height: 150px;
+    margin-top: 5px;
+    background-repeat: no-repeat; background-position: center; background-size: cover;
+}
+.cajon_casa p
+{
+   float: left;
+   width: 100%;
+   height: 30px;
+   margin-top: 5px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+.cajon_casa img
+{
+   cursor: pointer;
+}
+
+#opt_box
+{
+    overflow: hidden; background-color: #fff; display: none; position: absolute; z-index: 1000; border: 1px solid #efefef;
+    box-shadow: 0 0 4px rgba(0,0,0,0.8); width: 170px;
+}
+
+#opt_box img
+{
+    float: right; margin-top: 5px; margin-bottom: 5px; cursor: pointer;
+}
+
+#opt_box ul
+{
+    list-style: none; width: 100%;
+}
+
+#opt_box ul li
+{
+    list-style: none;
+    float: left; width: 100%;
+    padding: 5px; border-bottom: 1px solid #efefef;
+    cursor: pointer;
+}
+#opt_box ul li:hover
+{
+    background-color: #efefef;
+}
+
+.form{
+    width: 100%;
+    padding: 8px;
+    /* background:#E2E2E2; */
+    border: 1px solid rgba(13, 12, 12, 0.23);
+    margin-bottom: 15px;
+    color:#252525 !important;
+    font-family: Open Sans;
+    font-size:13px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.form:hover{
+    border:1px solid #8BC3A3;
+}
+
+.form:focus{
+    color: white;
+    outline: none;
+    border:1px solid #8BC3A3;
+}
+
+.textarea{
+    height: 120px;
+    max-height: 140px;
+    max-width: 100%;
+}
+
+.form-btn{
+    width:150px;
+    font-size: 15px;
+    display: block;
+    float: left;
+    height: auto;
+    padding:8px;
+    color:#fff;
+    background:rgba(80, 160, 108, 1);
+    border:none;
+    border-radius:3px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin: 0 auto;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    text-align: center;
+    cursor: pointer;
+}
+.form-btn:hover{
+    background: rgba(85, 184, 120, 1);
+    color: white;
+    border:none;
+}
+
+.form-btn:active{
+    opacity: 0.9;
+}

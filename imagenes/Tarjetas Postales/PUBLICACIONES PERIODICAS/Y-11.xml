@@ -1,0 +1,20 @@
+<Picture>
+  <TitleEng>Y-11</TitleEng>
+  <TitleEsp>Y-11 </TitleEsp>
+  <Price>5</Price>
+  <Dimentions>1014x1619</Dimentions>
+  <DescriptionEng>
+  </DescriptionEng>
+  <DescriptionEsp> “Mercurio”. Serie “Joven vendiendo periódicos”</DescriptionEsp>
+  <Properties>
+    <Property name="Description" language="1033">
+    </Property>
+    <Property name="Descripcion" language="3082"> “Mercurio”. Serie “Joven vendiendo periódicos”</Property>
+    <Property name="Emition" language="1033">
+    </Property>
+    <Property name="Emision" language="3082">Estudio Roto </Property>
+    <Property name="Coments" language="1033">
+    </Property>
+    <Property name="Comentarios" language="3082">“Mercurio” fue un diario de tipo mercantil fundado en la Habana en 1917 por Evaristo Tabeada y José M. Campmany. Su director era Carlos Garrido. Duró hasta los días de la caída del gobierno de Machado en 1933. </Property>
+  </Properties>
+</Picture>

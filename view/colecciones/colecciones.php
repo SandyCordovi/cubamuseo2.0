@@ -16,6 +16,7 @@ if($l == 'en')
 
     <div class="bg-light border-right" id="sidebar-wrapper" style="background-color: #fff !important;">
         <div class="list-group list-group-flush">
+            <h2 style="text-align: center;color: #777;font-size: 18px;cursor: pointer">Categorías</h2>
             <?php for($i=0; $i<count($menu); $i++){ ?>
                 <ul>
                     <li>

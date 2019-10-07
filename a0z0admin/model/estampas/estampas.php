@@ -921,7 +921,7 @@ function DeleteItemOfMuestra($m)
     }
 }
 
-function DeleteMuestra1($id)
+function DeleteMuestras($id)
 {
     //eliminado las referencia de las categorias de la seccion
     $query="DELETE FROM clasificacion_muestra WHERE idMuestra=$id";

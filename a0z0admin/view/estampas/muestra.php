@@ -97,7 +97,7 @@ function Refresh()
     $('#search_admin').val("");
     $.ajax(
     {
-        url : 'service/estampas/muestras.php',
+        url : 'service/estampas/muestra.php',
         type: "POST",
         data : "p="+pagina_va+"&b="+$('#search_admin').val()+"&opt="+$('#seccion_select').val(),
         datatype: "html",

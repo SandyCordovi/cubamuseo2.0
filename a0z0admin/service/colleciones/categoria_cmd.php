@@ -29,7 +29,6 @@ if($cmd==1)
     $imagenes = utf8_encode($_FILES['imagenes_zip']['name']);
 
 
-
     $docText=array();
     $dirTmp = "../../".Configuracion::$temp;
     if($wordes)

@@ -21,7 +21,7 @@ class Configuracion
     ///////////PAGINACION///////////////
     static $fila_x_pag = 8;
     static $dimencion_navegacion = 480;
-    static $num_elem_x_pag = 10;
+    static $num_elem_x_pag = 100;
     static $item_x_fila_gal = 8;
 
     //////////WEBMAIL////////////////////

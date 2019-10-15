@@ -55,7 +55,7 @@ a:hover {
 }
 span:hover{
     border-bottom: 5px solid #8fd0a6;
-    padding-bottom: 8px;
+    /*padding-bottom: 8px;*/
 }
 
 
@@ -786,6 +786,7 @@ footer a i
 .cui_tab_btn_activo
 {
     border-bottom: 3px solid #8fd0a6;
+    color: #8fd0a6;
 }
 .cui_tabs_content
 {

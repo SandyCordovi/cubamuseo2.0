@@ -16,7 +16,7 @@ $n = Configuracion::$num_elem_x_pag;
 $cant_pag = ceil($total/$n);
 
 ?>
-<table class="grid">
+cu<table class="grid">
   <thead>
     <tr>
       <th>Titulo</th>

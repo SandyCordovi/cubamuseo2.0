@@ -60,7 +60,7 @@ if(isset($_SESSION['username'])){
             <?php
             $description = $item[descripcion];
             if(strlen($description) > 500): ?>
-                <?= $description_cut = substr($description, 0, 500) . " ..."; ?>
+                <?= utf8_decode($description_cut = substr($description, 0, 500) . " ..."); ?>
 
                 <button class="more_text" style=" text-align: left; font-size: .9em; color:#5c84b5; background-color: transparent; border-style: hidden;
                         " onclick="javascript:see_more('hidden_div','show_div')" >

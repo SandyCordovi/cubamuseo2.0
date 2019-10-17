@@ -9,7 +9,7 @@ $sent = $_GET['sent'];
 
 if($sent==1)$json = getNextInGal($id, $idCat);
 else $json = getPrevInGal($id, $idCat);
-
+console.log($json);
 echo json_encode($json);
 
 ?>

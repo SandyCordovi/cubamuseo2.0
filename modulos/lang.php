@@ -103,7 +103,7 @@ Exhibits dedicated to numismatics, graphic arts, philately, vitolfilia (the art 
 
     function getGaleria($id)
     {
-        $this->es["tab1"]="Descripci&oacute;n";
+        $this->es["tab1"]="Texto";
         $this->es["tab2"]="Galer&iacute;a de p&#225ginas";
         $this->es["tab3"]="Galer&iacute;a Imagenes";
         $this->es["sm1"]="Ver";
@@ -112,7 +112,7 @@ Exhibits dedicated to numismatics, graphic arts, philately, vitolfilia (the art 
         $this->es["sm4"]="Ver galer&iacute;a completa";
         $this->es["sm5"]=" de ";
 
-        $this->us["tab1"]="Description";
+        $this->us["tab1"]="Text";
         $this->us["tab2"]="Gallery";
         $this->us["tab3"]="Gallery Image";
         $this->us["sm1"]="View";

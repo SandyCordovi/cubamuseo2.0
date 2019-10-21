@@ -399,7 +399,7 @@ header
 }
 .cui_menu_activo
 {
-    border-bottom: 5px solid #8fd0a6;
+    border-bottom: 5px solid #65c888;
     padding-bottom: 8px;
 }
 
@@ -785,8 +785,8 @@ footer a i
 }
 .cui_tab_btn_activo
 {
-    border-bottom: 3px solid #8fd0a6;
-    color: #8fd0a6;
+    border-bottom: 3px solid #65c888;
+    color: #65c888;
 }
 .cui_tabs_content
 {

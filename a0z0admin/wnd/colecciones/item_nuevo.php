@@ -103,6 +103,10 @@ $cat = $_GET['cat'];
                 success:function(data, textStatus, jqXHR)
                 {
                     cui_wnd._closeAll();
+                    if(data.salida.msg == "ok"){
+                        txt = 'El elemento se ha insertado exitosamente';
+                        cui_wnd._createWND_tamFijo('wnd/SimpleMsgDlg.php?txt='+txt, 40);
+                    }
                     Refresh();
                 },
                 error: function(jqXHR, textStatus, errorThrown)

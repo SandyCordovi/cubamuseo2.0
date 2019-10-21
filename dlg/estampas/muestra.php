@@ -11,7 +11,7 @@ $muestra = getMuestra($m);
 $item = getItem($id);
 
 ?>
-<p class="cui_titulo_nav">
+<p class="cui_titulo_nav" style="color: #0b0b0b; font-weight: bold;">
     <?php echo utf8_decode($item['nombre']) ?> | <?php echo utf8_decode($item['titulo']) ?>
 </p>
 <div style="vertical-align: middle; text-align: center; display: inline-table;">

@@ -235,8 +235,8 @@ function getGaleriaMuestrasEN($categoria)
     while ($row = $stmt->fetch())
     {
         $html[$n]['id']=$col1;
-        $html[$n]['nombre']=$col5;
-        $html[$n]['titulo']=$col3;   
+        $html[$n]['nombre']=utf8_decode($col5);
+        $html[$n]['titulo']=utf8_decode($col3);
         $html[$n]['imagen']=$col4;
 		$html[$n]['carpeta']=$col2;
         $n++;
@@ -384,15 +384,15 @@ function getNextInGal($id, $idMuestra)
     while ($row = $stmt->fetch())
     {
         $html['id']=$col1;
-        $html['nombre']=$col2;
-        $html['titulo']=$col3;
-        $html['descripcion']=$col4;
+        $html['nombre']=utf8_decode($col2);
+        $html['titulo']=utf8_decode($col3);
+        $html['descripcion']=utf8_decode($col4);
         $html['imagen']=$col5;
-        $html['dimension']=$col6;
-        $html['emision']=$col7;
-        $html['material']=$col8;
-        $html['color']=$col9;
-        $html['impresion']=$col10;
+        $html['dimension']=utf8_decode($col6);
+        $html['emision']=utf8_decode($col7);
+        $html['material']=utf8_decode($col8);
+        $html['color']=utf8_decode($col9);
+        $html['impresion']=utf8_decode($col10);
         $html['precio']=$col11;
         $html['url'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p=0';

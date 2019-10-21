@@ -35,7 +35,7 @@ $menu = getMenuByRol($_SESSION['cuiadmin_rol']);
             </li>
 
             <li class="caption <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <p class="caption">Administrativa</p>
+                <p class="caption" style="font-weight: bold">ADMINISTRATIVA</p>
             </li>
             <li class="link<?php echo "rol"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>1 ? 'oculto' : '' ?>">
                 <a href="?f=rol">Rol</a>
@@ -46,7 +46,7 @@ $menu = getMenuByRol($_SESSION['cuiadmin_rol']);
             
 
             <li class="caption <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <p class="caption">Colecciones</p>
+                <p class="caption" style="font-weight: bold">TEMÁTICAS</p>
             </li>
             <li class="link<?php echo "c_secciones"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
                 <a href="?f=c_secciones">Secciones</a>
@@ -63,7 +63,7 @@ $menu = getMenuByRol($_SESSION['cuiadmin_rol']);
 
 
             <li class="caption <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <p class="caption">Estampas</p>
+                <p class="caption" style="font-weight: bold">ESTAMPAS</p>
             </li>
             <li class="link<?php echo "e_categoria"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
                 <a href="?f=e_categoria">Categorias</a>
@@ -80,7 +80,7 @@ $menu = getMenuByRol($_SESSION['cuiadmin_rol']);
 
 
             <li class="caption <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <p class="caption">V-Post</p>
+                <p class="caption" style="font-weight: bold">V-POST</p>
             </li>
             <li class="link<?php echo "e_categoria"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
                 <a href="?f=v_postal">Postales</a>
@@ -91,10 +91,10 @@ $menu = getMenuByRol($_SESSION['cuiadmin_rol']);
 
 
             <li class="caption <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <p class="caption">Tienda</p>
+                <p class="caption" style="font-weight: bold">TIENDA</p>
             </li>
             <li class="link<?php echo "t_temat"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <a href="?f=t_temat">Tematicas</a>
+                <a href="?f=t_temat">Temáticas</a>
             </li>
             <li class="link<?php echo "t_item"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>3 ? 'oculto' : '' ?>">
                 <a href="?f=t_item">Items</a>
@@ -105,7 +105,7 @@ $menu = getMenuByRol($_SESSION['cuiadmin_rol']);
 
 
             <li class="caption <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <p class="caption">Generales</p>
+                <p class="caption" style="font-weight: bold">GENERALES</p>
             </li>
             <li class="link<?php echo "clientes"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
                 <a href="?f=clientes">Clientes</a>

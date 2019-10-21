@@ -4,8 +4,8 @@ class Configuracion
     //////DB///////////////////////////
     static $host="localhost";
     static $database_name="cubamuseo";
-    static $database_user="Sandy";
-    static $database_pass="lamisma";
+    static $database_user="root";
+    static $database_pass="";
 
 
     /////////////SITE////////////////////

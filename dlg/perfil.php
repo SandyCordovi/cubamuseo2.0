@@ -4,7 +4,7 @@ session_start();
 ?>
 
 <div class="cui_row">
-    <div class="cui_row"  style="background-color: #dedede; padding: 20px; padding-bottom: 0;">
+    <div class="cui_row"  style="background-color: #ffffff; padding: 20px; padding-bottom: 0;">
         <div class="" style="background-image: url(images/hombre_perfil.png); background-repeat: no-repeat; background-position: center center; background-size: auto 90px; width: 100px; height: 100px; border-radius: 50%; margin: 0 auto; background-color: #fff; ">
         </div>
 

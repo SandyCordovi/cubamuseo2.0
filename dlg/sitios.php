@@ -3,7 +3,7 @@
 ?>
 
 <div class="cui_row">
-    <div class="cui_row"  style="background-color: #dedede; padding: 20px; padding-bottom: 20px;">
+    <div class="cui_row"  style="background-color: #ffffff; padding: 20px; padding-bottom: 20px;">
         <div class="" style="background-image: url(images/relacionados.png); background-repeat: no-repeat; background-position: center center; background-size: 70px; width: 100px; height: 100px; border-radius: 50%; margin: 0 auto; background-color: #fff; ">
         </div>
 		<div class="cui_cart_items">

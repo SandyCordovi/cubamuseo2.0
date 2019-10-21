@@ -46,6 +46,10 @@ $item = getMuestra($id);
                 success:function(data, textStatus, jqXHR)
                 {
                     cui_wnd._closeAll();
+                    if(data.salida.msg == "ok"){
+                        txt = 'El archivo se ha modificado exitosamente';
+                        cui_wnd._createWND_tamFijo('wnd/SimpleMsgDlg.php?txt='+txt, 40);
+                    }
                     Refresh();
                 },
                 error: function(jqXHR, textStatus, errorThrown)

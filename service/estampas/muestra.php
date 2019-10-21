@@ -22,6 +22,9 @@ $galeria = $all==0 ?  getGaleriaMuestra($id, $n, $s) : getAllGaleriaMuestra($id,
 
 <?php for($i=0; $i<count($galeria); $i++){ ?>
     <a id="cat_<?php echo $galeria[$i]['id']; ?>" class="cui_gal_item_cat" href="#" style="width: <?php echo 100/$cxf; ?>%;" data-id="<?php echo $galeria[$i]['id']; ?>" >
+        <div class="vtn_info_item">
+            <h2><?php echo utf8_decode($galeria[$i]['titulo']); ?></h2>
+        </div>
         <img class="cui_gal_image" src="service/ri.php?s=Muestras&c=<?php echo utf8_decode($muestra['carpeta']); ?>&i=<?php echo utf8_decode($galeria[$i]['imagen']); ?>&p=<?php echo $d; ?>" />
         <h3 class="cui_gal_text"><?php echo $galeria[$i]['nombre']; ?></h3>
     </a>

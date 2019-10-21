@@ -25,16 +25,16 @@ $item = getItem($id);
          <img src="images/cui_next.png" height="100px" />
     </div>
 </div>
-<div style="display: block; padding: 20px; background-color: #dcdcdc;">
+<div style="display: block; padding: 20px; background-color: #FFFFFF;">
     <div style="max-width: 550px;">
         <div class="cui_descr_nav" id="show_div" style="text-align: left; font-size: .9em;">
             <?php
             $description = $item[descripcion];
             if(strlen($description) >= 500): ?>
-                <?= $description_cut = substr($description, 0, 500) . " ..."; ?>
+                <?= $description_cut = utf8_decode(substr($description, 0, 500)) . " ..."; ?>
 
                 <button class="more_text" style=" text-align: left; font-size: .9em; color:#5c84b5; background-color: transparent; border-style: hidden;
-                        " onclick="javascript:see_more('hidden_div','show_div')" >
+                        " onclick=javascript:see_more('hidden_div','show_div') >
                     (Ver más)
                 </button>
             <?php endif; ?>

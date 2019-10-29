@@ -12,9 +12,9 @@ $item = getCategoria($id);
 <div class="row" style="overflow: hidden; padding: 20px;">
 
     <form id="formWnd" action="service/colleciones/categoria_cmd.php" method="post" enctype="multipart/form-data" class="cui_row">
-        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Word ES</p>
+        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Tabla ES</p>
         <input type="file" class="form" name="word_es" placeholder="Tabla de Word" required="required" />
-        <p style="margin-bottom: 5px; text-align: left;">Word EN</p>
+        <p style="margin-bottom: 5px; text-align: left;">Tabla EN</p>
         <input type="file" class="form" name="word_en" placeholder="Tabla de Word EN"/>
         
         <input type="hidden" name="cmd" value="8" />

@@ -12,13 +12,13 @@
         
         <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Nombre</p>
         <input class="form" name="nombre" placeholder="Nombre" required="required" />
-        <p style="margin-bottom: 5px; text-align: left;">Username</p>
-        <input class="form" name="username" placeholder="Username" required="required" />
+        <p style="margin-bottom: 5px; text-align: left;">Nombre usuario</p>
+        <input class="form" name="username" placeholder="Usuario" required="required" />
         
-        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Email</p>
-        <input class="form" name="email" placeholder="Email" required="required" />
-        <p style="margin-bottom: 5px; text-align: left;">Password</p>
-        <input class="form" name="password" type="password" placeholder="Password"  required="required" />
+        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Correo</p>
+        <input class="form" name="email" placeholder="Correo" required="required" />
+        <p style="margin-bottom: 5px; text-align: left;">Contraseña</p>
+        <input class="form" name="password" type="password" placeholder="Contrasña"  required="required" />
 
 
         

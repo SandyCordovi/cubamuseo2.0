@@ -2180,7 +2180,9 @@ cui_menu_lateral_item a:hover{
     max-height: calc(100vh - 210px);
     overflow-y: auto;
 }
-div .cui_div_zoom {
+.cui_div_zoom {
     max-width: calc(100vw - 210px);
     overflow-x: auto;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
 }

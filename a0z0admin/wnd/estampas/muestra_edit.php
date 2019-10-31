@@ -31,7 +31,7 @@ $categorias = getCategoriasSP();
         <p style="margin-bottom: 5px; text-align: left;">Nombre EN</p>
         <input class="form" name="nombre_en" placeholder="Nombre EN" value="<?php echo utf8_decode($item['name']); ?>" />
 
-        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen</p>
+        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen de item</p>
         <input type="file" class="form" name="imagen" placeholder="Imagen" />
         <p style="margin-bottom: 5px; text-align: left;">Imagen Menu</p>
         <input type="file" class="form" name="imagen_galeria" placeholder="Imagen Galeria" />
@@ -42,9 +42,9 @@ $categorias = getCategoriasSP();
         <p style="margin-bottom: 5px; margin-top: 20px; text-align: left;">Descripcion En</p>
         <textarea id="descrip_en" name="descrip_en"><?php echo utf8_decode($item['description']); ?></textarea>
 
-        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Word ES</p>
+        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Tabla ES</p>
         <input type="file" class="form" name="word_es" placeholder="Tabla de Word" />
-        <p style="margin-bottom: 5px; text-align: left;">Word EN</p>
+        <p style="margin-bottom: 5px; text-align: left;">Tabla EN</p>
         <input type="file" class="form" name="word_en" placeholder="Tabla de Word EN"/>
 		<p style="margin-bottom: 5px; text-align: left;">Imagenes(.Zip)</p>
         <input type="file" class="form" name="imagenes_zip" placeholder="Zip Imagenes" />

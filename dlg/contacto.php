@@ -10,7 +10,7 @@
         <form id="myFormContact" class="cui_row" action="service/contacto.php" method="post" style="position: relative;">
             <label class="cui_row" style="text-align: left;">Nombre</label>
             <input class="cui_input cui_input_user" name="nombre" />
-            <label class="cui_row" style="text-align: left;">Email</label>
+            <label class="cui_row" style="text-align: left;">Correo</label>
             <input class="cui_input cui_input_email" name="email" />
             <label class="cui_row" style="text-align: left;">Mensaje</label>
             <textarea class="cui_input" style="height:150px;" name="mensaje"></textarea>

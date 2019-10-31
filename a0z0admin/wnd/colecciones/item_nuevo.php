@@ -18,7 +18,7 @@ $cat = $_GET['cat'];
         <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Nombre</p>
         <input class="form" name="nombre" placeholder="Nombre" required="required" />
 
-        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen</p>
+        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen de item</p>
         <input type="file" class="form" name="imagen" placeholder="Imagen" required="required" />
 
         <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Dimension</p>

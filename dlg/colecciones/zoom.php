@@ -38,15 +38,15 @@ if($l == 'en')
     <?php echo utf8_decode($item['nombre']) ?> | <?php echo utf8_decode($item['titulo']) ?>
 </p>
 <div>
-    <div  class="cui_div_zoom" style="max-width: 100%">
+    <div  class="cui_div_zoom" style="max-width: 100%; margin: 40px;">
         <img class="cui_img_gal_nav cui_img_zoom" src="service/ri.php?s=<?php echo utf8_decode($seccion['nombre']) ?>&c=<?php echo utf8_decode($categoria['carpeta']); ?>&i=<?php echo utf8_decode($item['imagen']); ?>&p=0" />
     </div>
-    <div style="padding-left: 20%;padding-right: 20%;">
-        <div class="cui_prev" style="display: table-cell; vertical-align: middle; opacity: .75; cursor: pointer;float: left">
+    <div style="padding-left: 20%;padding-right: 20%; ">
+        <div class="cui_prev" style="display: table-cell; vertical-align: middle; opacity: .75; cursor: pointer;float: left; margin-bottom: 15px;">
             <img src="images/cui_prev.png" height="40px" />
         </div>
 
-        <div class="cui_next" style="display: table-cell; vertical-align: middle; opacity: .75; cursor: pointer;float: right">
+        <div class="cui_next" style="display: table-cell; vertical-align: middle; opacity: .75; cursor: pointer;float: right; margin-bottom: 15px;">
             <img src="images/cui_next.png" height="40px" />
         </div>
     </div>

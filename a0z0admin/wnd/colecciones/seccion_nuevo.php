@@ -19,7 +19,7 @@
         <p style="margin-bottom: 5px; text-align: left;">Nombre EN</p>
         <input class="form" name="nombre_en" placeholder="Nombre EN"/>
 
-        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen</p>
+        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen de item</p>
         <input type="file" class="form" name="imagen" placeholder="Imagen" required="required" />
         <p style="margin-bottom: 5px; text-align: left;">Imagen Menu</p>
         <input type="file" class="form" name="imagen_menu" placeholder="Imagen Menu" required="required" />

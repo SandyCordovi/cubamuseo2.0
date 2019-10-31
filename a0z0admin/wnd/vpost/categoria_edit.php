@@ -22,7 +22,7 @@ $item = getCategoriaPostal($id);
         <p style="margin-bottom: 5px; text-align: left;">Nombre EN</p>
         <input class="form" name="nombre_en" placeholder="Nombre EN" value="<?php echo utf8_decode($item['name']); ?>" />
 
-        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen</p>
+        <p style="margin-bottom: 5px; margin-top: 10px; text-align: left;">Imagen de item</p>
         <input type="file" class="form" name="imagen" placeholder="Imagen" />
         <p style="margin-bottom: 5px; text-align: left;">Imagen Menu</p>
         <input type="file" class="form" name="imagen_galeria" placeholder="Imagen Menu" />

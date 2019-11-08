@@ -100,6 +100,7 @@ $secciones = getSeccionesSP();
                         txt = 'La categoría se ha modificado exitosamente';
                         cui_wnd._createWND_tamFijo('wnd/SimpleMsgDlg.php?txt='+txt, 40);
                     }
+                    window.Refresh();
                     Refresh();
                 },
                 error: function(jqXHR, textStatus, errorThrown)

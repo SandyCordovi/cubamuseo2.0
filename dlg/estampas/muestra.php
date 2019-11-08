@@ -31,11 +31,7 @@ $item = getItem($id);
             <?php
             $description = $item[descripcion];
             if(strlen($description) >= 500): ?>
-<<<<<<< HEAD
                 <?= $description_cut = utf8_decode(substr($description, 0, 500)) . " ..."; ?>
-=======
-                <?=utf8_decode($description_cut = substr($description, 0, 500) . " ..."); ?>
->>>>>>> refs/remotes/origin/master
 
                 <button class="more_text" style=" text-align: left; font-size: .9em; color:#5c84b5; background-color: transparent; border-style: hidden;
                         " onclick=javascript:see_more('hidden_div','show_div') >

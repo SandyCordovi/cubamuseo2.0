@@ -195,8 +195,8 @@ else if($cmd==2)
     {
         $dirnew = "../../../".Configuracion::$imagenes.$seccion['nombre'].'/'.utf8_decode($_POST['nombre']).'/';
         $tttt = rename($dir, $dirnew);
-        
-        $jsondata['salida']=array('type'=>"0", 'msg'=>'ok', 'data'=>$dirnew);
+
+        $jsondata['salida']=array('type'=>"0", 'msg'=>'ok', 'data'=>array());
         echo json_encode($jsondata);
     }
     else

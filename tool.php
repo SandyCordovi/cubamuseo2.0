@@ -111,6 +111,9 @@ function getFrameAdmin($f)
         case "e_muestra":
             return "view/estampas/muestra.php";
             break;
+        case "e_item":
+            return "view/estampas/item.php";
+            break;
 	case "t_texto":
             return "view/tienda/texto.php";
             break;

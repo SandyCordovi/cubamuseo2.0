@@ -10,6 +10,7 @@ $b = $_POST['b'];
 $cat = $_POST['opt'];
 
 $item = getItem($s, $b, $cat);
+/** @var TYPE_NAME $total */
 $total = getTotalItem($b, $cat);
 
 

@@ -8,7 +8,7 @@ $item = getAllTematicas();
 <div class="cui_row">
     <div class="cui_w">
         <div class="cui_row" style="margin-top: 40px;">
-            <p class="cui_txt_titulo_sessionBig cui_txt_light">TEMATICAS</p>
+            <p class="cui_txt_titulo_sessionBig cui_txt_light">TEMÁTICAS</p>
         </div>
         <div class="cui_cajon33" style="padding: 20px;">
 

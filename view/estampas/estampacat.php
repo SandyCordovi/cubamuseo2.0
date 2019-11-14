@@ -54,7 +54,7 @@ if($l == 'en')
 <div class="d-flex" id="wrapper">
     <div class="bg-light border-right" id="sidebar-wrapper" style="background-color: #fff !important;">
         <div class="list-group list-group-flush">
-            <h2 style="text-align: center;color: #777;font-size: 18px;margin: 10px">Temáticas</h2>
+            <h2 style="text-align: center;color: #777;font-size: 18px;margin-top: 20px">Temáticas</h2>
             <ul>
                 <li>
                     <a href="?f=catestampa-<?php echo $l;?>-0" class="cui_menu_lateral_item">

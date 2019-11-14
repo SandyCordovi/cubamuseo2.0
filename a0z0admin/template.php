@@ -66,7 +66,7 @@ $menu = getMenuByRol($_SESSION['cuiadmin_rol']);
                 <p class="caption" style="font-weight: bold">ESTAMPAS</p>
             </li>
             <li class="link<?php echo "e_categoria"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
-                <a href="?f=e_categoria">Categorias</a>
+                <a href="?f=e_categoria">Temáticas</a>
             </li>
             <li class="link<?php echo "e_estampa"==$f ? " linkactivo" : "" ?> <?php echo $_SESSION['cuiadmin_rol']>2 ? 'oculto' : '' ?>">
                 <a href="?f=e_estampa">Estampas</a>

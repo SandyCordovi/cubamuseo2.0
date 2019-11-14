@@ -10,7 +10,7 @@ $p = $_GET['p'];
 $catPostal = getCategoriaPostal($p);
 $postal = getPostal($id);
 ?>
-<p class="cui_titulo_nav" style="margin-bottom: 10px;">
+<p class="cui_titulo_nav" style="margin-bottom: 10px;color: #0b0b0b; font-weight: bold;">
     <?php echo utf8_decode($catPostal['nombre']) ?>
 </p>
 

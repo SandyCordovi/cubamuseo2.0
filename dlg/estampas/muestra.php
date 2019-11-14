@@ -19,7 +19,7 @@ $item = getItem($id);
         <img src="images/cui_prev.png" height="100px" />
     </div>
     <div  style="display: table-cell; text-align: center; vertical-align: middle; padding: 0px; width: 500px; height: 500px;">
-        <img class="cui_img_gal_nav cui_img_ozoom" style="cursor: pointer; max-width: 500px; max-height: 500px;" src="service/ri.php?s=Muestras&c=<?php echo utf8_decode($muestra['carpeta']); ?>&i=<?php echo utf8_decode($item['imagen']); ?>&p=<?php echo Configuracion::$dimencion_navegacion; ?>" />
+        <img class="cui_img_gal_nav cui_img_zoom" style="cursor: pointer; max-width: 500px; max-height: 500px;" src="service/ri.php?s=Muestras&c=<?php echo utf8_decode($muestra['carpeta']); ?>&i=<?php echo utf8_decode($item['imagen']); ?>&p=<?php echo Configuracion::$dimencion_navegacion; ?>" />
     </div>
     <div class="cui_next" style="display: table-cell; vertical-align: middle; opacity: .75; cursor: pointer;">
          <img src="images/cui_next.png" height="100px" />
@@ -27,7 +27,7 @@ $item = getItem($id);
 </div>
 <div style="display: block; padding: 20px; background-color: #FFFFFF;">
     <div style="max-width: 550px;">
-        <div class="cui_descr_nav" id="show_div" style="text-align: left; font-size: .9em;">
+        <div class="cui_descr_nav" id="show_div" style="text-align: left; font-size: .9em;color: #0b0b0b;">
             <?php
             $description = $item[descripcion];
             if(strlen($description) >= 500): ?>
@@ -43,7 +43,7 @@ $item = getItem($id);
                 echo utf8_decode($description);  ?>
 
         </div>
-        <div class="cui_descr_nav" id="hidden_div" style="text-align: left; font-size: .9em; display: none;">
+        <div class="cui_descr_nav" id="hidden_div" style="text-align: left; font-size: .9em; display: none;color: #0b0b0b;">
             <?php
             $description = $item[descripcion];
             echo utf8_decode($description);

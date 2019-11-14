@@ -56,7 +56,7 @@ if(isset($_SESSION['username'])){
 </div>
 <div style="display: block; padding: 20px; background-color: #FFFFFF;">
     <div style="max-width: 550px; margin: 0 auto;">
-        <div class="cui_descr_nav" id="show_div" style="text-align: left; font-size: .9em; display: block; ">
+        <div class="cui_descr_nav" id="show_div" style="text-align: left; font-size: .9em; display: block; color: #0b0b0b;  ">
             <?php
             $description = $item[descripcion];
             if(strlen($description) > 500): ?>
@@ -72,7 +72,7 @@ if(isset($_SESSION['username'])){
                 echo utf8_decode($description);  ?>
 
         </div>
-        <div class="cui_descr_nav" id="hidden_div" style="text-align: left; font-size: .9em; display: none;">
+        <div class="cui_descr_nav" id="hidden_div" style="text-align: left; font-size: .9em; display: none;color: #0b0b0b;">
             <?php
             $description = $item[descripcion];
             echo utf8_decode($description);
@@ -95,7 +95,7 @@ if(isset($_SESSION['username'])){
 		<?php } ?>
 		<?php if((trim($item['material']) != null) && strlen(trim($item['material']))>0){?>		
 		<p style="text-align: left; font-size: .9em; padding-top:5px;">
-            <span style="font-weight:bold; color: #0b0b0b;font-size: 0.9em; "><?php echo $clang->getWnd('c3'); ?>:</span> <span class="cui_material_nav" style="font-size: 0.9em; color: #0b0b0b;"><?php echo utf8_decode($item['material']) ?></span>
+            <span style="font-weight:bold; color: #0b0b0b;font-size: 0.9em; "><?php echo $clang->getWnd('c3'); ?>:</span> <span class="cui_material_nav" style="font-size: 0.9em; color: #0b0b0b;"><?php echo $item['material'] ?></span>
         </p>
 		<?php } ?>
 		<?php if((trim($item['impresion']) != null) && strlen(trim($item['impresion']))>0){?>		

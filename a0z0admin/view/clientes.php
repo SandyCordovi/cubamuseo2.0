@@ -4,7 +4,7 @@
 //include '../lib/DocxConversion.php';
 //$docObj = new DocxConversion("word.docx");
 //$docText= $docObj->convertToText();
-//$docText = preg_split('/--/', $docText);
+//$docText = preg_split('/__/', $docText);
 //print_r($docText);
 
 

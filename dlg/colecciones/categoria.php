@@ -40,7 +40,7 @@ if(isset($_SESSION['username'])){
 
 
 ?>
-<p class="cui_titulo_nav" style="font-weight: bold;color: #0b0b0b">
+<p class="cui_titulo_nav" style="font-weight: bold; color: black">
     <?php echo utf8_decode($item['nombre']) ?> | <?php echo utf8_decode($item['titulo']) ?>
 </p>
 <div class="cui_zoom_btn">
@@ -60,10 +60,10 @@ if(isset($_SESSION['username'])){
             <?php
             $description = $item[descripcion];
             if(strlen($description) > 500): ?>
-                <?= utf8_decode($description_cut = substr($description, 0, 500) . " ..."); ?>
+                <?= $description_cut = utf8_decode(substr($description, 0, 500)) . " ..."; ?>
 
                 <button class="more_text" style=" text-align: left; font-size: .9em; color:#5c84b5; background-color: transparent; border-style: hidden;
-                        " onclick="javascript:see_more('hidden_div','show_div')" >
+                        " onclick=javascript:see_more('hidden_div','show_div') >
                     (Ver más)
                 </button>
             <?php endif; ?>
@@ -85,32 +85,36 @@ if(isset($_SESSION['username'])){
         </div>
         <?php if((trim($item['emision']) != null) && strlen(trim($item['emision']))>0){?>
         <p style="text-align: left; font-size: .9em; padding-top:5px;">
-            <span style="font-weight:bold; color:#000000 ;font-size: 0.9em; "><?php echo $clang->getWnd('c1'); ?>:</span> <span class="cui_emision_nav" style="font-size: 0.9em;color: #0b0b0b; "><?php echo utf8_decode($item['emision']) ?></span>
+            <span style="font-weight:bold; font-size: 0.9em;color: black "><?php echo $clang->getWnd('c1'); ?>:</span> <span class="cui_emision_nav" style="font-size: 0.9em; "><?php echo utf8_decode($item['emision']) ?></span>
         </p>
         <?php } ?>
 		<?php if((trim($item['color']) != null) && strlen(trim($item['color']))> 0 ){?>		
 		<p  style="text-align: left; font-size: .9em; padding-top:5px;">
-            <span style="font-weight:bold;color: #0b0b0b; font-size: .9em; "><?php echo $clang->getWnd('c2'); ?>:</span> <span class="cui_color_nav" style="font-size: 0.9em;color: #0b0b0b; "><?php echo utf8_decode($item['color']) ?></span>
+            <span style="font-weight: bold; color: black; font-size: 0.9em; "><?php echo $clang->getWnd('c2'); ?>:</span> <span class="cui_color_nav" style="font-size: 0.9em; "><?php echo utf8_decode($item['color']) ?></span>
         </p>
 		<?php } ?>
 		<?php if((trim($item['material']) != null) && strlen(trim($item['material']))>0){?>		
 		<p style="text-align: left; font-size: .9em; padding-top:5px;">
+<<<<<<< HEAD
             <span style="font-weight:bold; color: #0b0b0b;font-size: 0.9em; "><?php echo $clang->getWnd('c3'); ?>:</span> <span class="cui_material_nav" style="font-size: 0.9em; color: #0b0b0b;"><?php echo $item['material'] ?></span>
+=======
+            <span style="font-weight: bold; color: black; font-size: 0.9em; "><?php echo $clang->getWnd('c3'); ?>:</span> <span class="cui_material_nav" style="font-size: 0.9em; "><?php echo utf8_decode($item['material']) ?></span>
+>>>>>>> 998acef8c8747eabde2c1e442f108b85fb95b584
         </p>
 		<?php } ?>
 		<?php if((trim($item['impresion']) != null) && strlen(trim($item['impresion']))>0){?>		
 		<p  style="text-align: left; font-size: .9em; padding-top:5px;">
-            <span style="font-weight:bold; color: #0b0b0b;font-size: 0.9em; "><?php echo $clang->getWnd('c4'); ?>:</span> <span class="cui_impresion_nav" style="font-size: 0.9em;color: #0b0b0b; "><?php echo utf8_decode($item['impresion']) ?></span>
+            <span style="font-weight: bold; color: black; font-size: 0.9em; "><?php echo $clang->getWnd('c4'); ?>:</span> <span class="cui_impresion_nav" style="font-size: 0.9em; "><?php echo utf8_decode($item['impresion']) ?></span>
         </p>
 		<?php } ?>
         <?php if((trim($item['dimension']) != null) && strlen(trim($item['dimension']))>0){?>
 		<p style="text-align: left; font-size: .9em; padding-top:5px;">
-            <span style="font-weight:bold; color: #0b0b0b;font-size: 0.9em; "><?php echo $clang->getWnd('c5'); ?>:</span> <span class="cui_dimension_nav"  style="font-size: 0.9em;color: #0b0b0b; "><?php echo utf8_decode($item['dimension']) ?></span>
+            <span style="font-weight: bold; color: black; font-size: 0.9em; "><?php echo $clang->getWnd('c5'); ?>:</span> <span class="cui_dimension_nav"  style="font-size: 0.9em; "><?php echo utf8_decode($item['dimension']) ?></span>
         </p>
 		<?php } ?>
          <?php if($item['precio'] > 0){?>
 		<p  style="text-align: center; padding-top:15px;">
-                    <span style="font-size: 1.1em;color: #0b0b0b;font-weight: bold; "><?php echo $clang->getWnd('c6'); ?> (<span class="cui_dimension_nav"  style="font-size: 0.9em;color: #0b0b0b; "><?php echo utf8_decode($item['dimension']) ?></span> pixels) <?php echo $clang->getWnd('c7'); ?> <b>$<span class="cui_precio_nav" style="font-size: 0.9em; "><?php echo $item['precio']; ?></span></b> </span>
+                    <span style="font-size: 1.1em; "><?php echo $clang->getWnd('c6'); ?> (<span class="cui_dimension_nav"  style="font-size: 0.9em; "><?php echo utf8_decode($item['dimension']) ?></span> pixels) <?php echo $clang->getWnd('c7'); ?> <b>$<span class="cui_precio_nav" style="font-size: 0.9em; "><?php echo $item['precio']; ?></span></b> </span>
                 </p>
 
                 <?php if(IsLogin()) {?>

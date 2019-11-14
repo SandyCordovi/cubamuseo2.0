@@ -100,7 +100,7 @@ function getTotalCategorias($b)
 function AddCategoriaEstampa($nombre, $name, $imagenMenu)
 {
     $orden = getMayorOrdenCategoriaEstampa()+1;
-    $query="INSERT INTO categoriaestampa VALUES(null,'$nombre',$orden,'$imagenMenu')";
+    $query="INSERT INTO categoriaestampa VALUES(null,'$nombre',$orden,'$imagenMenu',1)";
     $model = new model();
     $stmt = $model->get_stmt($query);
     if ($stmt)
@@ -721,6 +721,51 @@ function getMuestras($p, $b, $categoria)
     return $html;
 }
 
+function getMuestrasSP(){
+    $query="SELECT m.idMuestra as id, m.nombre as nombre
+			FROM muestra as m
+			ORDER BY m.orden";
+
+    $model = new model();
+    $stmt = $model->get_stmt($query);
+    $stmt->bind_result($col1, $col2);
+    $n = 0;
+    $val = array();
+    $html = array();
+    while ($row = $stmt->fetch())
+    {
+        $val['id']=$col1;
+        $val['nombre']=$col2;
+        $html[$n] = $val;
+        $n++;
+    }
+    return $html;
+}
+
+function getItemsByMuestras($id){
+    $query="SELECT i.idItem as id, i.nombre, i.titulo, i.imagen
+			FROM item as i inner join muestra_item as mi
+			where mi.idMuestra = ".$id." and mi.idItem = i.idItem
+			ORDER BY mi.orden";
+
+    $model = new model();
+    $stmt = $model->get_stmt($query);
+    $stmt->bind_result($col1, $col2, $col3, $col4);
+    $n = 0;
+    $val = array();
+    $html = array();
+    while ($row = $stmt->fetch())
+    {
+        $val['id']=$col1;
+        $val['nombre']=$col2;
+        $val['titulo']=$col3;
+        $val['imagen']=$col4;
+        $html[$n] = $val;
+        $n++;
+    }
+    return $html;
+}
+
 function getTotalMuestras($b, $categoria)
 {
     $query="SELECT COUNT(m.idMuestra)
@@ -904,6 +949,7 @@ function getAllItemMuestra($m)
     }
     return $html;
 }
+
 
 function DeleteItemOfMuestra($m)
 {

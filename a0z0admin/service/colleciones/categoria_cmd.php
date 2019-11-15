@@ -36,7 +36,7 @@ if($cmd==1)
         UpLoadImg($_FILES['word_es'], $dirTmp);
         $docObj = new DocxConversion($dirTmp.$_FILES['word_es']['name']);
         $docText= $docObj->convertToText();
-        $docText = preg_split('/--/', $docText);
+        $docText = preg_split('/__/', $docText);
         unlink($dirTmp.$_FILES['word_es']['name']);
     }
     
@@ -164,7 +164,7 @@ else if($cmd==2)
         UpLoadImg($_FILES['word_es'], $dirTmp);
         $docObj = new DocxConversion($dirTmp.$_FILES['word_es']['name']);
         $docText= $docObj->convertToText();
-        $docText = preg_split('/--/', $docText);
+        $docText = preg_split('/__/', $docText);
         unlink($dirTmp.$_FILES['word_es']['name']);
         if($itemsecc['nombre'] == "Tarjetas Postales")
         {
@@ -251,7 +251,7 @@ else if($cmd==7)
         UpLoadImg($_FILES['word_es'], $dirTmp);
         $docObj = new DocxConversion($dirTmp.$_FILES['word_es']['name']);
         $docText= $docObj->convertToText();
-        $docText = preg_split('/--/', $docText);
+        $docText = preg_split('/__/', $docText);
         unlink($dirTmp.$_FILES['word_es']['name']);
         if($itemsecc['nombre'] == "Tarjetas Postales")
         {
@@ -302,7 +302,7 @@ else if($cmd==8)
         UpLoadImg($_FILES['word_es'], $dirTmp);
         $docObj = new DocxConversion($dirTmp.$_FILES['word_es']['name']);
         $docText= $docObj->convertToText();
-        $docText = preg_split('/--/', $docText);
+        $docText = preg_split('/__/', $docText);
         unlink($dirTmp.$_FILES['word_es']['name']);
         if($itemsecc['nombre'] == "Tarjetas Postales")
         {

@@ -100,7 +100,7 @@ function getTotalCategorias($b)
 function AddCategoriaEstampa($nombre, $name, $imagenMenu)
 {
     $orden = getMayorOrdenCategoriaEstampa()+1;
-    $query="INSERT INTO categoriaestampa VALUES(null,'$nombre',$orden,'$imagenMenu')";
+    $query="INSERT INTO categoriaestampa VALUES(null,'$nombre',$orden,'$imagenMenu',1)";
     $model = new model();
     $stmt = $model->get_stmt($query);
     if ($stmt)

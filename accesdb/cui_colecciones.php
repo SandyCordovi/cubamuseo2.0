@@ -331,12 +331,12 @@ function getTotalGaleriaCategoria($categoria)
 
 function getItem($id)
 {
-    $query="SELECT idItem, nombre, titulo, descripcion, imagen, dimension, emision, material, color, impresion, precio
+    $query="SELECT idItem, nombre, titulo, descripcion, imagen, dimension, emision, material, color, impresion, precio, procedencia
 			FROM item
 			WHERE idItem=".$id;
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
     while ($row = $stmt->fetch())
     {
         $html['id']=$col1;
@@ -350,6 +350,7 @@ function getItem($id)
         $html['color']=$col9;
         $html['impresion']=$col10;
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
 		
     }
     return $html;
@@ -357,13 +358,13 @@ function getItem($id)
 
 function getItemEN($id)
 {
-    $query="SELECT i.idItem, i.nombre, e.title, e.description, i.imagen, e.dimension, e.emision, e.material, e.color, e.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, e.title, e.description, i.imagen, e.dimension, e.emision, e.material, e.color, e.impresion, i.precio, i.procedencia
 			FROM item as i inner join item_en as e
 			on i.idItem = e.idItem
 			WHERE e.idItem=".$id;
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
     while ($row = $stmt->fetch())
     {
         $html['id']=$col1;
@@ -377,6 +378,7 @@ function getItemEN($id)
         $html['color']=$col9;
         $html['impresion']=$col10;
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
     }
     return $html;
 }
@@ -384,14 +386,14 @@ function getItemEN($id)
 function getNextInGal($id, $idCat)
 {
     $item = getItem($id);
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio,i.procedencia
             FROM item AS i
             INNER JOIN categoria_item AS c
             ON c.idItem = i.idItem
             WHERE i.publicado AND c.idCategoria = ".$idCat." AND i.nombre>'".$item['nombre']."' Order by i.nombre Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
 	
     $categoria = getCategoria($idCat);
     $seccion = getSeccionCategoria($idCat);
@@ -411,6 +413,7 @@ function getNextInGal($id, $idCat)
         $html['color']=utf8_decode($col9);
         $html['impresion']=utf8_decode($col10);
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p=0';
     }
@@ -425,14 +428,14 @@ function getNextInGal($id, $idCat)
 
 function getPrimeroInGal($idCat)
 {
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio, i.procedencia
             FROM item AS i
             INNER JOIN categoria_item AS c
             ON c.idItem = i.idItem
             WHERE i.publicado AND c.idCategoria = ".$idCat." Order by i.nombre Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
 
     $categoria = getCategoria($idCat);
     $seccion = getSeccionCategoria($idCat);
@@ -452,6 +455,7 @@ function getPrimeroInGal($idCat)
         $html['color']=utf8_decode($col9);
         $html['impresion']=utf8_decode($col10);
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p=0';
     }
@@ -462,14 +466,14 @@ function getPrimeroInGal($idCat)
 function getPrevInGal($id, $idCat)
 {
     $item = getItem($id);
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio, i.procedencia
             FROM item AS i
             INNER JOIN categoria_item AS c
             ON c.idItem = i.idItem
             WHERE i.publicado AND c.idCategoria = ".$idCat." AND i.nombre<'".$item['nombre']."' Order by i.nombre DESC Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
 
     $categoria = getCategoria($idCat);
     $seccion = getSeccionCategoria($idCat);
@@ -489,6 +493,7 @@ function getPrevInGal($id, $idCat)
         $html['color']=utf8_decode($col9);
         $html['impresion']=utf8_decode($col10);
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p=0';
     }
@@ -503,14 +508,14 @@ function getPrevInGal($id, $idCat)
 
 function getUltimoInGal($idCat)
 {
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio,i.procedencia
             FROM item AS i
             INNER JOIN categoria_item AS c
             ON c.idItem = i.idItem
             WHERE i.publicado AND c.idCategoria = ".$idCat." Order by i.nombre DESC Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
 
     $categoria = getCategoria($idCat);
     $seccion = getSeccionCategoria($idCat);
@@ -530,6 +535,7 @@ function getUltimoInGal($idCat)
         $html['color']=utf8_decode($col9);
         $html['impresion']=utf8_decode($col10);
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s='.utf8_decode($seccion['nombre']).'&c='.utf8_decode($categoria['carpeta']).'&i='.utf8_decode($col5).'&p=0';
     }

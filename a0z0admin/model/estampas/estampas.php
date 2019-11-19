@@ -1039,9 +1039,9 @@ function ChangePrecioMuestra($id, $precio)
     return FALSE;
 }
 
-function AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, $dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $muestra)
+function AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, $procedencia, $source,$dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $muestra)
 {
-    $query="INSERT INTO item VALUES(null,'$nombre','$titulo','$imagen','$descripcion','$dimension','$imageSize','$emision','$material','$color','$impresion',0,1,1)";
+    $query="INSERT INTO item VALUES(null,'$nombre','$titulo','$imagen','$descripcion','$dimension','$procedencia','$imageSize','$emision','$material','$color','$impresion',0,1,1)";
     $model = new model();
     $stmt = $model->get_stmt($query);
     if ($stmt)
@@ -1057,7 +1057,7 @@ function AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, 
         {
                 $id_actual = $col1;
         }
-        $query="INSERT INTO item_en VALUES($id_actual,'$title','$description','$emisione','$materiale','$colore','$impresione','$dimensione')";
+        $query="INSERT INTO item_en VALUES($id_actual,'$title','$description','$source','$emisione','$materiale','$colore','$impresione','$dimensione')";
         $model = new model();
         $stmt = $model->get_stmt($query);
 

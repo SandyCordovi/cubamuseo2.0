@@ -368,14 +368,14 @@ function getGaleriaMuestrasTEN($categoria)
 function getNextInGal($id, $idMuestra)
 {
     $item = getItem($id);
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio, i.procedencia
             FROM item AS i
             INNER JOIN muestra_item AS m
             ON m.idItem = i.idItem
             WHERE i.publicado AND m.idMuestra = ".$idMuestra." AND i.nombre>'".$item['nombre']."' Order by i.nombre Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
 
     $muestra = getMuestra($idMuestra);
 
@@ -394,6 +394,7 @@ function getNextInGal($id, $idMuestra)
         $html['color']=utf8_decode($col9);
         $html['impresion']=utf8_decode($col10);
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p=0';
     }
@@ -408,14 +409,14 @@ function getNextInGal($id, $idMuestra)
 
 function getPrimeroInGal($idMuestra)
 {
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio, i.procedencia
             FROM item AS i
             INNER JOIN muestra_item AS m
             ON m.idItem = i.idItem
             WHERE i.publicado AND m.idMuestra = ".$idMuestra." Order by i.nombre Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
 
     $muestra = getMuestra($idMuestra);
 
@@ -434,6 +435,7 @@ function getPrimeroInGal($idMuestra)
         $html['color']=$col9;
         $html['impresion']=$col10;
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p=0';
     }
@@ -444,14 +446,14 @@ function getPrimeroInGal($idMuestra)
 function getPrevInGal($id, $idMuestra)
 {
     $item = getItem($id);
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio, i.procedencia
             FROM item AS i
             INNER JOIN muestra_item AS m
             ON m.idItem = i.idItem
             WHERE i.publicado AND m.idMuestra = ".$idMuestra." AND i.nombre<'".$item['nombre']."' Order by i.nombre DESC Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
 
     $muestra = getMuestra($idMuestra);
 
@@ -470,6 +472,7 @@ function getPrevInGal($id, $idMuestra)
         $html['color']=utf8_decode($col9);
         $html['impresion']=utf8_decode($col10);
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p=0';
     }
@@ -484,14 +487,14 @@ function getPrevInGal($id, $idMuestra)
 
 function getUltimoInGal($idMuestra)
 {
-    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio
+    $query="SELECT i.idItem, i.nombre, i.titulo, i.descripcion, i.imagen, i.dimension, i.emision, i.material, i.color, i.impresion, i.precio,i.procedencia
             FROM item AS i
             INNER JOIN muestra_item AS m
             ON m.idItem = i.idItem
             WHERE i.publicado AND m.idMuestra = ".$idMuestra." Order by i.nombre DESC Limit 0,1";
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11, $col12);
 
     $muestra = getMuestra($idMuestra);
 
@@ -510,6 +513,7 @@ function getUltimoInGal($idMuestra)
         $html['color']=$col9;
         $html['impresion']=$col10;
         $html['precio']=$col11;
+        $html['procedencia']=$col12;
         $html['url'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p='.Configuracion::$dimencion_navegacion;//'imagenes/'.$seccion['nombre'].'/'.$categoria['nombre'].'/'.$col5;
         $html['urlZoom'] = 'service/ri.php?s=Muestras&c='.$muestra['carpeta'].'&i='.$col5.'&p=0';
     }
@@ -519,12 +523,12 @@ function getUltimoInGal($idMuestra)
 
 function getItem($id)
 {
-    $query="SELECT idItem, nombre, titulo, descripcion, imagen, dimension, emision, material, color, impresion, precio
+    $query="SELECT idItem, nombre, titulo, descripcion, imagen, dimension, emision, material, color, impresion, precio, procedencia
 			FROM item
 			WHERE idItem=".$id;
     $model = new model();
     $stmt = $model->get_stmt($query);
-    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11);
+    $stmt->bind_result($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11,$col12);
     while ($row = $stmt->fetch())
     {
         $html['id']=$col1;
@@ -538,6 +542,7 @@ function getItem($id)
 		$html['color']=$col9;
 		$html['impresion']=$col10;
 		$html['precio']=$col11;
+		$html['procedencia']=$col12;
     }
     return $html;
 }

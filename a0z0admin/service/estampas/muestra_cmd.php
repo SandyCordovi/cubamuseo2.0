@@ -56,7 +56,7 @@ if($cmd==1)
         $zip->close();
         unlink($dirTmp.$_FILES['imagenes_zip']['name']);
 
-        ReadWordArr($docText, array("nombre", "titulo", "emision", "descripcion"), $cat_actual['id']);
+        ReadWordArr($docText, array("nombre", "titulo", "emision","procedencia", "descripcion"), $cat_actual['id']);
         
         $jsondata['salida']=array('type'=>"0", 'msg'=>'ok', 'data'=>array());
         echo json_encode($jsondata);
@@ -195,7 +195,7 @@ else if($cmd==7)
         $docText= $docObj->convertToText();
         $docText = preg_split('/__/', $docText);
         unlink($dirTmp.$_FILES['word_es']['name']);
-        ReadWordArr($docText, array("nombre", "titulo", "emision", "descripcion"), $id);
+        ReadWordArr($docText, array("nombre", "titulo", "emision","procedencia", "descripcion"), $id);
     }
 
     if($imagenes)
@@ -231,7 +231,7 @@ else if($cmd==8)
         $docText = $docObj->convertToText();
         $docText = preg_split('/__/', $docText);
         unlink($dirTmp.$_FILES['word_es']['name']);
-        ReadWordArr($docText, array("nombre", "titulo", "emision", "descripcion"), $id);
+        ReadWordArr($docText, array("nombre", "titulo", "emision","procedencia", "descripcion"), $id);
     }
     
     $jsondata['salida']=array('type'=>"0", 'msg'=>'ok', 'data'=>array());
@@ -318,6 +318,13 @@ function ReadWordArr($docText, $field, $categoria)
 
             $imagen = $nombre.'.jpg';
 
+            $i_procedencia = FindValueInArr("procedencia", $field);
+            $procedencia = $i_procedencia==-1 ? "" : utf8_encode($arr[$i_procedencia]);
+
+            $i_source = FindValueInArr("source", $field);
+            $source = $i_source==-1 ? "" : utf8_encode($arr[$i_source]);
+
+
             $i_descripcion = FindValueInArr("descripcion", $field);
             $descripcion = $i_descripcion==-1 ? "" : utf8_encode($arr[$i_descripcion]);
 
@@ -360,7 +367,7 @@ function ReadWordArr($docText, $field, $categoria)
             $i_precio = FindValueInArr("precio", $field);
             $precio = $i_precio==-1 ? "" : $arr[$i_precio];
 
-            AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, $dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $categoria);
+            AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description,$procedencia,$source, $dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $categoria);
         }
     }
     catch (Exception $exc)

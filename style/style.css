@@ -831,7 +831,8 @@ footer a i
 }
 .cui_wndcontent
 {
-    float: left; overflow: hidden; display: none;
+    float: left; display: none;
+    overflow: auto;
 }
 .cui_wndshow
 {    

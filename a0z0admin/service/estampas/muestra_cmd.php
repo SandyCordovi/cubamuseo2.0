@@ -125,7 +125,7 @@ else if($cmd==2)
         $docText= $docObj->convertToText();
         $docText = preg_split('/__/', $docText);
         unlink($dirTmp.$_FILES['word_es']['name']);
-        ReadWordArr($docText, array("nombre", "titulo", "emision", "descripcion"), $id);
+        ReadWordArr($docText, array("nombre", "titulo", "emision","procedencia", "descripcion"), $id);
     }
 
     if($seccion['id']!=$item['seccion'])

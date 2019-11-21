@@ -27,7 +27,11 @@ if($cmd==1)
     $dimension = ValidaEmpty(utf8_encode($_POST['dimension']), "");
     $dimensione = utf8_encode($_POST['dimension_en']);
     $dimensione = $dimensione==null || $dimensione=="" ? Configuracion::$txt_ingles : $dimensione;
-    
+
+    $procedencia = ValidaEmpty(utf8_encode($_POST['procedencia']), "");
+    $source = utf8_encode($_POST['procedencia_en']);
+    $source = $source==null || $source=="" ? Configuracion::$txt_ingles : $source;
+
     $imageSize = "";
 
     $emision = ValidaEmpty(utf8_encode($_POST['emision']), "");
@@ -49,7 +53,7 @@ if($cmd==1)
     $precio = utf8_encode($_POST['precio']);
     $precio = $precio==null || $precio=="" ? "0" : $precio;
 
-    if(AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, $dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $categoria))
+    if(AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description,$procedencia,$source, $dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $categoria))
     {
         $dir = "../../../".Configuracion::$imagenes.$itemsecc['nombre'].'/'.utf8_decode(utf8_decode($item['nombre'])).'/';
         UpLoadImg($_FILES['imagen'], $dir);
@@ -86,6 +90,10 @@ else if($cmd==2)
     $dimensione = utf8_encode($_POST['dimension_en']);
     $dimensione = $dimensione==null || $dimensione=="" ? Configuracion::$txt_ingles : $dimensione;
 
+    $procedencia = ValidaEmpty(utf8_encode($_POST['procedencia']), "");
+    $source = utf8_encode($_POST['procedencia_en']);
+    $source = $source==null || $source=="" ? Configuracion::$txt_ingles : $source;
+
     $imageSize = "";
 
     $emision = ValidaEmpty(utf8_encode($_POST['emision']), "");
@@ -107,7 +115,7 @@ else if($cmd==2)
     $precio = utf8_encode($_POST['precio']);
     $precio = $precio==null || $precio=="" ? "0" : $precio;
 
-    if(EditItem($id, $titulo, $title, $descripcion, $description, $dimension, $dimensione, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio))
+    if(EditItem($id, $titulo, $title, $descripcion, $description,$procedencia,$source, $dimension, $dimensione, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio))
     {
         $jsondata['salida']=array('type'=>"0", 'msg'=>'ok', 'data'=>array());
         echo json_encode($jsondata);

@@ -892,9 +892,9 @@ function EditTextoGaleria($nombre, $name, $imagen, $descripcion, $description)
     }
 }
 
-function AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, $dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $categoria)
+function AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description,$procedencia,$source, $dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $categoria)
 {
-    $query="INSERT INTO item VALUES(null,'$nombre','$titulo','$imagen','$descripcion','$dimension','$imageSize','$emision','$material','$color','$impresion',0,1,1)";
+    $query="INSERT INTO item VALUES(null,'$nombre','$titulo','$imagen','$descripcion','$dimension','$imageSize','$emision','$material','$color','$impresion',0,1,1,'$procedencia')";
     $model = new model();
     $stmt = $model->get_stmt($query);
     if ($stmt)
@@ -933,7 +933,7 @@ function AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, 
     }
 }
 
-function EditItem($id, $titulo, $title, $descripcion, $description, $dimension, $dimensione, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio)
+function EditItem($id, $titulo, $title, $descripcion, $description, $procedencia, $source, $dimension, $dimensione, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio)
 {
     $query="UPDATE item 
 			SET titulo = '$titulo',
@@ -943,7 +943,8 @@ function EditItem($id, $titulo, $title, $descripcion, $description, $dimension, 
 				material = '$material',
 				color = '$color',
 				impresion = '$impresion',
-				precio = $precio
+				precio = $precio,
+				procedencia = '$procedencia'
 			WHERE idItem = $id";
     $model = new model();
     $stmt = $model->get_stmt($query);
@@ -956,7 +957,9 @@ function EditItem($id, $titulo, $title, $descripcion, $description, $dimension, 
 					emision = '$emisione',
 					material = '$materiale',
 					color = '$colore',
-					impresion = '$impresione'
+					impresion = '$impresione',
+					source='$source'
+					
 				WHERE idItem = $id";
 		$model = new model();
 		$stmt = $model->get_stmt($query);		

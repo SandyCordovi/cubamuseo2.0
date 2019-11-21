@@ -1041,7 +1041,7 @@ function ChangePrecioMuestra($id, $precio)
 
 function AddItem($nombre, $titulo, $title, $imagen, $descripcion, $description, $procedencia, $source,$dimension, $dimensione, $imageSize, $emision, $emisione, $material, $materiale, $color, $colore, $impresion, $impresione, $precio, $muestra)
 {
-    $query="INSERT INTO item VALUES(null,'$nombre','$titulo','$imagen','$descripcion','$dimension','$procedencia','$imageSize','$emision','$material','$color','$impresion',0,1,1)";
+    $query="INSERT INTO item VALUES(null,'$nombre','$titulo','$imagen','$descripcion','$dimension','$imageSize','$emision','$material','$color','$impresion',0,1,1,'$procedencia')";
     $model = new model();
     $stmt = $model->get_stmt($query);
     if ($stmt)

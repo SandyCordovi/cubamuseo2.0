@@ -157,6 +157,7 @@ Exhibits dedicated to numismatics, graphic arts, philately, vitolfilia (the art 
         $this->es["c3"]="Material";
         $this->es["c4"]="Impresi&oacute;n";
         $this->es["c5"]="Dimensiones del original";
+        $this->es["c13"]="Procedencia";
         $this->es["c6"]="Usted puede adquirir esta imagen en grandes dimensiones ";
         $this->es["c7"]=" en formato jpg, a 300 dpi y sin marca de agua por un precio de ";
         $this->es["b1"]="Esta imagen esta en su carrito.";

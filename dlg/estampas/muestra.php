@@ -56,7 +56,12 @@ $item = getItem($id);
         </div>
 
     </div>
-    </div>
+    <?php if((trim($item['procedencia']) != null) && strlen(trim($item['procedencia']))>0){?>
+        <p style="text-align: left; font-size: .9em; padding-top:5px;">
+            <span style="font-weight:bold; font-size: 0.9em;color: black ">Procedencia</span> <span class="cui_emision_nav" style="font-size: 0.9em; "><?php echo utf8_decode($item['procedencia']) ?></span>
+        </p>
+    <?php } ?>
+</div>
     
 </div>
 

@@ -115,9 +115,10 @@ if(isset($_SESSION['username'])){
 
         <?php if((trim($item['procedencia']) != null) && strlen(trim($item['procedencia']))>0){?>
             <p style="text-align: left; font-size: .9em; padding-top:5px;">
-                <span style="font-weight:bold; font-size: 0.9em;color: black "><?php echo $clang->getWnd('c1'); ?>:</span> <span class="cui_emision_nav" style="font-size: 0.9em; "><?php echo utf8_decode($item['procedencia']) ?></span>
+                <span style="font-weight:bold; font-size: 0.9em;color: black "><?php echo $clang->getWnd('c13'); ?>:</span> <span class="cui_emision_nav" style="font-size: 0.9em; "><?php echo utf8_decode($item['procedencia']) ?></span>
             </p>
         <?php } ?>
+
          <?php if($item['precio'] > 0){?>
 		<p  style="text-align: center; padding-top:15px;">
                     <span style="font-size: 1.1em; "><?php echo $clang->getWnd('c6'); ?> (<span class="cui_dimension_nav"  style="font-size: 0.9em; "><?php echo utf8_decode($item['dimension']) ?></span> pixels) <?php echo $clang->getWnd('c7'); ?> <b>$<span class="cui_precio_nav" style="font-size: 0.9em; "><?php echo $item['precio']; ?></span></b> </span>
